@@ -198,6 +198,53 @@ body {
 </head>
 
 <body itemtype='https://schema.org/WebPage' itemscope='itemscope' class="home wp-singular page-template-default page page-id-12 wp-custom-logo wp-embed-responsive wp-theme-astra wp-child-theme-astra_child ast-desktop astra-dark-mode-enable ast-plain-container ast-no-sidebar astra-4.11.13 ast-single-post ast-inherit-site-logo-transparent ast-theme-transparent-header ast-hfb-header">
+<!-- Geburtstag-Anfang: Popup „Stillleben“ mit Einladung zum 7.11.2026. Nach dem 8.11. alles bis „Geburtstag-Ende“ entfernen. -->
+<style>
+@font-face { font-family: Cinzel; font-weight: 700; font-display: swap; src: url(fonts/cinzel-700-latin.woff2) format("woff2"); }
+/* Schriftregeln der Seite (Großbuchstaben, Sperrung, Unterstreichung, Farbe, Schrift) hier nicht übernehmen */
+.stillleben, .stillleben * { letter-spacing: normal; text-transform: none; text-decoration: none;
+  color: inherit; font-family: inherit; }
+.stillleben { position: fixed; inset: 0; z-index: 9999; width: auto; height: auto; max-width: none; max-height: none;
+  box-sizing: border-box; margin: 0; padding: 16px; border: 0; background: rgba(40, 28, 12, .6); line-height: 1.3; }
+.stillleben[open] { display: flex; align-items: center; justify-content: center; }
+.stillleben .fenster { position: relative; display: flex; flex-direction: column; align-items: center; gap: 18px;
+  width: min(520px, 100%); max-height: 100%; overflow: auto; box-sizing: border-box; padding: 56px 20px 24px;
+  border: 5px solid #d09a40;
+  background: #ebe6d8 url(wp-content/uploads/2025/10/profhome-tapete-wallpaper-937701-GU.jpg-768x768.jpg) center / 620px; }
+/* Schließen ohne Skript: ein Formular mit method="dialog" schließt das Popup */
+.stillleben form { position: absolute; top: 8px; right: 8px; margin: 0; }
+.stillleben button { width: 40px; height: 40px; margin: 0; padding: 0; border: 2px solid #6e4b14; border-radius: 0;
+  background: #fbf6e6; color: #3d2a08; font: 700 28px/1 Georgia, serif; cursor: pointer; }
+.stillleben button:hover, .stillleben button:focus-visible { background: #f3d27a; }
+.stillleben .rahmen { position: relative; line-height: 0; border: 26px solid;
+  border-image: linear-gradient(135deg, #6e4b14, #f3d27a 22%, #a87b2a 42%, #f6dc8c 62%, #8a6420 80%, #f3d27a) 1;
+  box-shadow: 0 0 0 4px #4a330d, 8px 10px 0 rgba(0, 0, 0, .3); }
+.stillleben .rahmen::before { content: ""; position: absolute; left: 25%; right: 25%; top: -48px; height: 12px;
+  background: linear-gradient(#f1d27c, #8a6420); }
+.stillleben img { height: min(34vh, 340px); filter: saturate(.85) sepia(.25) contrast(1.05); }
+.stillleben .schild { max-width: 100%; box-sizing: border-box; padding: 10px 24px;
+  background: linear-gradient(#f3d27a, #b88a2e); border: 2px solid #6e4b14; color: #3d2a08;
+  font: 700 clamp(14px, 2vw, 18px)/1.5 Cinzel, Georgia, serif; letter-spacing: 2px; text-align: center; }
+.stillleben .schild b { display: block; font-size: 1.5em; }
+.stillleben .karte { width: 100%; box-sizing: border-box; padding: 14px 18px 12px; background: #fbf6e6;
+  border: 1px solid #b89a5a; outline: 1px solid #b89a5a; outline-offset: -6px; box-shadow: 5px 6px 0 rgba(0, 0, 0, .3);
+  color: #3d2a08; font: 18px/1.35 Karma, Georgia, serif; text-align: center; }
+.stillleben .karte b { display: block; margin-bottom: 4px; font: 700 clamp(20px, 3vw, 26px) Cinzel, Georgia, serif; }
+.stillleben .karte small { display: block; margin-top: 6px; font-size: 14px; }
+</style>
+<dialog class="stillleben" open aria-label="Einladung zum Geburtstag">
+  <div class="fenster">
+    <form method="dialog"><button aria-label="Schließen">×</button></form>
+    <div class="rahmen"><img src="geburtstag/noppenkrug.jpg" alt="Bierkrug im Goldrahmen"></div>
+    <div class="schild"><b>Happy Birthday</b>Stillleben mit Krug · 3 Jahre Tschoch</div>
+    <div class="karte">
+      <b>Kommt alle vorbei!</b>
+      Samstag, 7. November: Bands, Vegan Food, Saufi Saufi (auch draußen)
+      <small>Ab 10 Uhr Subotnik: Freisitz in den Keller tragen · Am 8.11. bleibt zu</small>
+    </div>
+  </div>
+</dialog>
+<!-- Geburtstag-Ende -->
 
 <a
 	class="skip-link screen-reader-text"

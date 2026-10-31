@@ -15,12 +15,19 @@ Statische Kopie von tschoch.de für GitHub Pages (Quelle: Branch `main`, Ordner 
 | `index.html` | Startseite (Onepager mit Ankern) |
 | `404.html` | Fehlerseite im Stil der Seite, mit rootrelativen Pfaden |
 | `wp-content/`, `wp-includes/` | Theme-CSS/JS und Bilder in der alten WordPress-Pfadstruktur, damit alte Bild-URLs gültig bleiben |
-| `fonts/` | Karma und Sono (SIL OFL 1.1), lokal statt über Google Fonts |
+| `fonts/` | Karma und Sono (SIL OFL 1.1), lokal statt über Google Fonts; dazu Cinzel für den Geburtstag |
+| `geburtstag/` | Foto für den Geburtstagsgruß (siehe unten) |
 | `CNAME`, `.nojekyll`, `robots.txt`, `sitemap.xml` | Einstellungen für GitHub Pages und Suchmaschinen |
 
 Die Seite lädt keine Ressourcen von Drittanbietern und setzt keine Cookies. Die Bierliste („Was war das noch gleich“, Anker `#bierliste`) war in WordPress per Jetpack „Repeat Visitor“ erst ab dem dritten Besuch sichtbar. Das geht auf einer statischen Seite nicht serverseitig; sie ist deshalb seit 31.10.2026 immer sichtbar und wurde aus dem WordPress-Datenbankexport übernommen.
 
 **Achtung:** Das Repository ist öffentlich. Alles, was in `index.html` steht, ist im Quelltext und in der Git-Historie für jeden lesbar – auch wenn es auf der Seite per CSS oder JavaScript versteckt wird.
+
+## Geburtstag (bis 8.11.2026)
+
+- `index.html` enthält direkt nach `<body>` einen Block zwischen `<!-- Geburtstag-Anfang … -->` und `<!-- Geburtstag-Ende -->`: ein Popup mit dem „Stillleben“ und der Einladung zum 7.11. Nur HTML und CSS, kein Skript: Es ist ein `<dialog open>`, das bei jedem Aufruf erscheint und über das × oben rechts schließt (`<form method="dialog">`).
+- Dazu gehören `geburtstag/noppenkrug.jpg` (Foto: Jongleur100, gemeinfrei, über Wikimedia Commons) und `fonts/cinzel-700-latin.woff2` (Cinzel, SIL OFL 1.1, Lizenz in `fonts/OFL-cinzel.txt`).
+- Nach dem 8.11. den Block entfernen. Foto und Schrift können liegen bleiben oder mit raus.
 
 ## Lokal testen
 
